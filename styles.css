@@ -1,101 +1,173 @@
-*{
-    margin : 0;
-    padding : 0;
-    font-family:'popins' ,sans-serif;
+/* ========== RESET & BASE STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-body{
-   
-    background:  #c10d82;
+body {
+    background: #c10d82;
+    min-height: 100vh;
 }
 
-.app{
+/* ========== MAIN CONTAINER ========== */
+.app {
     background: #fff;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.app h1 {font-size: 25px;
-   
-    color:#c10d82;
-    font-weight:600;
+/* ========== TYPOGRAPHY ========== */
+.app h1 {
+    font-size: 25px;
+    color: #c10d82;
+    font-weight: 600;
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
-    }
+    text-align: center;
+}
 
-.quiz{
+.quiz h2 {
+    font-size: 18px;
+    color: #c10d82;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ========== QUIZ SECTION ========== */
+.quiz {
     padding: 20px 0;
 }
 
-.quiz h2{
-    font-size: 18px;
-   
-    color:#c10d82;
-    font-weight: 600;
+/* ========== PROGRESS BAR ========== */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 15px 0;
+    height: 8px;
+    overflow: hidden;
 }
 
-.btn{
-    background:#fff;
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #c10d82;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+    background: #fff;
     color: #222;
     font-weight: 500;
     width: 100%;
     border: 1px solid #222;
-    padding: 10px;
-    margin: 10px 0; 
-    text-align: left; 
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s;
-
+    transition: all 0.3s ease;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
-.btn:hover:not([disabled]){
-    /* background: #eb98bf; */
-     background: #e6bdd7 ;
+.btn:hover:not([disabled]) {
+    background: #e6bdd7;
     color: #100505;
+    transform: translateY(-1px);
 }
 
-.btn:disabled{
-    cursor: no-drop;
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
-#next-btn{
+.btn.selected {
+    background: #d59cc1;
+    border-color: #c10d82;
+    font-weight: 600;
+}
+
+/* ========== NEXT BUTTON ========== */
+#next-btn {
     background: #c10d82;
     color: #fff;
     font-weight: 500;
     width: 150px;
-    border:0;
-    padding: 10px;
+    border: 0;
+    padding: 12px;
     margin: 20px auto 0;
     border-radius: 4px;
     cursor: pointer;
     display: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
 }
 
-.selected{
-    /* background: rgb(226, 149, 203) ; */
-      background: #d59cc1;
+#next-btn:hover:not([disabled]) {
+    background: #a00a6b;
+    transform: translateY(-1px);
 }
 
-.progress-container {
-  width: 100%;
-  background-color: #ddd;
-  border-radius: 10px;
-  margin: 15px 0;
-  height: 8px;
+#next-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
-.progress-bar {
-  height: 100%;
-  width: 0%;
- 
-  background-color: #c10d82;
-  border-radius: 10px;
-  transition: width 0.3s ease;
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    .app {
+        width: 95%;
+        margin: 50px auto 0;
+        padding: 20px;
+    }
+    
+    .app h1 {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+    
+    .quiz h2 {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    #next-btn {
+        width: 130px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        margin: 30px auto 0;
+        padding: 15px;
+    }
+    
+    .app h1 {
+        font-size: 20px;
+    }
+    
+    .quiz h2 {
+        font-size: 15px;
+    }
+    
+    .btn {
+        padding: 10px;
+        font-size: 12px;
+    }
 }
 
 

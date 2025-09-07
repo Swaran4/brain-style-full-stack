@@ -3,33 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Quiz app</title>
-    <link rel = "stylesheet" href = "styles.css">
+    <meta name="description" content="Discover your brain dominance with our interactive quiz - Are you left or right brained?">
+    <title>Brain Style Quiz - Interactive Assessment</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class = 'app'>
-    <h1>Brain Style Quiz - Are You Left or Right Brained?</h1>
-    <!-- Progress bar -->
-<div class="progress-container">
-  <div class="progress-bar" id="progress"></div>
-</div>
+    <main class="app">
+        <!-- Header Section -->
+        <header>
+            <h1>Brain Style Quiz - Are You Left or Right Brained?</h1>
+        </header>
 
-    <div class ="quiz">
-        <h2 id = "question">Question goes here</h2>
-    </div>
-    
-    <div id="answer-buttons">
-        <button class = "btn">Answer 1</button>
-        <button class = "btn">Answer 2</button>
-        <button class = "btn">Answer 3</button>
-        <!-- <button class = "btn">Answer 4</button> -->
-    </div>
-    <button id="next-btn">Next</button>
-</div>
+        <!-- Progress Section -->
+        <section class="progress-container" aria-label="Quiz Progress">
+            <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </section>
 
-<script src=script.js></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <!-- Quiz Section -->
+        <section class="quiz" aria-live="polite">
+            <h2 id="question">Question goes here</h2>
+        </section>
+        
+        <!-- Answer Section -->
+        <section id="answer-buttons" role="group" aria-label="Answer Options">
+            <!-- Answer buttons will be dynamically generated -->
+        </section>
+
+        <!-- Navigation Section -->
+        <section class="navigation">
+            <button id="next-btn" type="button">Next</button>
+        </section>
+
+        <!-- Disclaimer -->
+        <footer class="disclaimer">
+            <p><small><em>Note: This result is based on common thinking preferences and is for fun. Everyone uses both sides of their brain, and personality or skills aren't strictly determined by left or right brain dominance.</em></small></p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-<!-- Note: This result is based on common thinking preferences and is for fun. Everyone uses both sides of their brain, and personality or skills aren’t strictly determined by left or right brain dominance." -->
