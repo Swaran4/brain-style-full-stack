@@ -84,12 +84,12 @@ Get quiz statistics
 
 ## 🧠 Quiz Types
 
-The quiz categorizes users into four types:
+The quiz categorizes users into three types:
 
 1. **Left Brain Dominant**: Logical, analytical, organized
 2. **Right Brain Dominant**: Creative, intuitive, artistic
 3. **Whole Brain Thinker**: Balanced use of both logic and creativity
-4. **Balanced/Mixed Thinker**: Flexible thinking style
+
 
 ## 🎨 Customization
 
